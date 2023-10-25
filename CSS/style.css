@@ -1,0 +1,48 @@
+* {
+  /* 마진 및 패딩 여백 0 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 테두리를 기준으로 박스 사이즈 정함 */
+}
+a,
+a:link,
+a:visited {
+  /* 방문X 방문o한 링크에 대한 속성 */
+  color: inherit; /* 글씨 색깔은 부모 요소 상속, 꾸미기X */
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1140px; /* 너비 속성 */
+  margin: 0 auto; /* 마진 영역 가운데 정렬 */
+}
+section {
+  font-family: "Poppins", sans-serif;
+  padding: 5rem 0; /* 패딩영역 상하 여백 설정*/
+}
+/* 번갈아 가며 배경색이 바뀜 */
+section :nth-child(2n) {
+  /* background-color: #f8f8f8; */
+}
+section .title {
+  margin-bottom: 3rem; /* 사진과 ABOUT ME 글자 사이의 여백 설정*/
+}
+section .title h4 {
+  font-size: 1.35rem;
+  color: #ed4848;
+  position: relative;
+}
+section .title h2 {
+  font-size: 3.5rem;
+}
+section .title p {
+  font-size: 1.15rem;
+}
+/* float 속성 해제 */
+section .about-self::after {
+  content: "";
+  clear: both;
+  display: block;
+}

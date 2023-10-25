@@ -1,0 +1,42 @@
+section {
+  background-color: #f8f8f8;
+}
+/* 부모 요소가 자식 요소의 높이를 제대로 알기 위해서는 아래와 같은 속성 설정이 필요 */
+section .do-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 사각형 크기의 간격, 내부 여백 설정 */
+section .do-me .do-inner {
+  width: 30%;
+  background-color: #fff;
+  padding: 2rem; /* 패딩 영역 여백 설정 */
+  margin-right: 5%; /* 한 개의 영역 당 30%의 지분을 가지고 있음. 총 100%가 되기 위해서는 마진 영역 즉 공백 영역에서 5%를 각각 넣어줌 */
+  cursor: pointer;
+  float: left; /* 왼쪽 정렬 */
+}
+/* 3영역의 마진 5%와 각 영역 30%를 합하면 105%가 되므로 맨 오른쪽 영역의 마진을 0으로 지정 */
+section .do-me .do-inner:last-child {
+  margin-right: 0;
+}
+/* 아이콘은 사진이 아니기에 폰트 설정이 가능 */
+section .do-me .do-inner .icon i {
+  font-size: 2.5rem;
+  color: #ff6a6a;
+}
+/* 아이콘 밑 h3 영역 설정  */
+section .do-me .do-inner .content h3 {
+  font-size: 2rem;
+  margin: 1rem 0; /* 마진 영역 위아래 여백 설정 */
+}
+section .do-me .do-inner .content p {
+  font-size: 1.15rem;
+}
+section .do-me .do-inner:hover {
+  background-color: lightcoral;
+  color: white;
+}
+section .do-me .do-inner:hover i {
+  color: white;
+}

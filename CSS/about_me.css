@@ -1,0 +1,69 @@
+.container {
+  width: 1140px; /* 너비 속성 */
+  margin: 0 auto; /* 마진 영역 가운데 정렬 */
+}
+section {
+  font-family: "Poppins", sans-serif;
+  padding: 5rem 0; /* 패딩영역 상하 여백 설정*/
+}
+/* 번갈아 가며 배경색이 바뀜 */
+section :nth-child(2n) {
+  background-color: #f8f8f8;
+}
+section .title {
+  margin-bottom: 3rem; /* 사진과 ABOUT ME 글자 사이의 여백 설정*/
+}
+section .title h4 {
+  font-size: 1.35rem;
+  color: #ed4848;
+  position: relative;
+}
+section .title h2 {
+  font-size: 3.5rem;
+}
+section .title p {
+  font-size: 1.15rem;
+}
+/* float 속성 해제 */
+section .about-self::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+section .about-self {
+  float: left; /* 위치 지정 왼쪽*/
+}
+/* 본문 너비 절반 지정 & 왼쪽 배치 */
+section .about-self .left {
+  float: left;
+  width: 50%; /* 왼쪽 오른쪽 각각 50%로 균일하게 배치 */
+}
+/* 이미지 크기가 부모 영역을 넘지 않도록 부모 영역의 최대 크기로 지정 */
+section .about-self .left img {
+  max-width: 100%;
+}
+/* 본문 너비 절반 지정 & 오른쪽 배치 */
+section .about-self .right {
+  width: 50%;
+  float: left;
+  padding: 0 2rem; /* 패딩영역 좌우 여백 설정*/
+}
+/* 본문 오른쪽 h3 태그의 글자 크기와 여백 지정 */
+section .about-self .right h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+/* 본문 오른쪽 h3 태그의 strong 태그 색상 지정 */
+section .about-self .right h3 strong {
+  color: #ed4848;
+}
+/* 본문 오른쪽 p 태그의 크기 및 여백 지정 */
+section .about-self .right p {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+}
+/* 본문 오른쪽 아이콘 폰트의 크기 및 여백 지정 */
+section .about-self .right .social a {
+  font-size: 2.5rem;
+  margin-right: 0.2rem;
+}
