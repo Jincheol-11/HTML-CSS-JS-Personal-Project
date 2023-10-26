@@ -1,0 +1,35 @@
+/* clear 속성으로 float 속성값 해제*/
+section.portfolio::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* inner 사각형 내부 꾸미는 속성 */
+section.portfolio .portfolio-inner {
+  width: 30%;
+  margin-right: 5%; /* 사각형 사이의 여백 설정 */
+  padding: 1rem 1rem 1.5rem 1rem; /* 패딩 영역 상우하좌 순서로 여백 설정 */
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 3rem; /* 마진 영역 아래 여백 설정 */
+}
+/* 3영역의 마진 5%와 각 영역 30%를 합하면 105%가 되므로 3n마다의 영역 마진을 0으로 지정 */
+section.portfolio .portfolio-inner:nth-child(3n) {
+  margin-right: 0;
+}
+/* 넘치는 사진 너비를 블럭에 딱맞게 설정 */
+section.portfolio .portfolio-inner img {
+  width: 100%;
+  display: block;
+}
+/* strong 태그 색상 및 간격 */
+section.portfolio .portfolio-inner strong {
+  color: #fa6a6a;
+  margin: 0.5rem 0;
+  display: block;
+}
+/* h3 태그 색상 및 간격 */
+section.portfolio .portfolio-inner h3 {
+  font-size: 1.75rem;
+}
